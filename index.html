@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function emailInvalueCheck(email) {
+        let regexp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$/;
+        if (regexp.test(email)) {
+            console.log("Email hợp lệ");
+        } else {
+            console.log("Email không hợp lệ");
+        }
+    }
+
+emailInvalueCheck('a@gmail.com');
+emailInvalueCheck('ab@yahoo.com');
+emailInvalueCheck('abc@hotmail.com');
+
+emailInvalueCheck('@gmail.com');
+emailInvalueCheck('ab@gmail.');
+emailInvalueCheck('@abc@gmail.com')
+
+</script>
+</body>
+</html>
